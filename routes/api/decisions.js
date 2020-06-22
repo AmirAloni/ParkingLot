@@ -7,7 +7,7 @@ const Decision = require("../../models/Decision");
 // @access   public
 router.get("/", async (req, res) => {
   try {
-    decisions = await Decision.find();
+    const decisions = await Decision.find();
 
     res.json(decisions);
   } catch (err) {
@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
 // @access   public
 router.delete("/", async (req, res) => {
   try {
-    deleted = await Decision.deleteMany();
+    const deleted = await Decision.deleteMany();
 
     res.json(deleted);
   } catch (err) {

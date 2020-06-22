@@ -1,7 +1,7 @@
 const Decision = require("../../models/Decision");
 
 async function writeDecision(decisionJson) {
-  decision = new Decision({
+  const decision = new Decision({
     decision: decisionJson.decision,
     reason: decisionJson.reason,
   });

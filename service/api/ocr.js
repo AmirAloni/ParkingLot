@@ -7,11 +7,11 @@ const ocrkey = config.get("ocrApikey");
 const ocrUrl = config.get("ocrApiUrl");
 
 module.exports = function (path) {
-  let data = new FormData();
+  const data = new FormData();
   data.append("file", fs.createReadStream(path));
   data.append("scale", "true");
 
-  let config = {
+  const config = {
     method: "post",
     url: ocrUrl,
     headers: {

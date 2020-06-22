@@ -21,7 +21,7 @@ const taxiVerify = (plateNumber) => {
 
 const governmentVerify = (plateNumber) => {
   let isGovernment = false;
-  plateNumber.forEach((char) => {
+  plateNumber.split("").forEach((char) => {
     if (isAlpha(char)) isGovernment = true;
   });
   return isGovernment;

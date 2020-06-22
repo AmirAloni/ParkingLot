@@ -25,7 +25,7 @@ const verifyPlate = (plateNumber, options) => {
       if (!stopCheckFlag) {
         if (optionsConfig[key](plateNumber)) {
           stopCheckFlag = true;
-          const decision = {
+          decision = {
             decision: false,
             reason: plateNumber + " " + key,
           };
