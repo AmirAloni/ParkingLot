@@ -8,7 +8,7 @@ const isAlpha = (ch) => {
 
 const sumLetters = (str) => {
   let sum = 0;
-  let splitStr = str.split("");
+  const splitStr = str.split("");
   for (let i = 0; i < splitStr.length; i++) {
     sum += parseInt(splitStr[i]);
   }
@@ -21,7 +21,7 @@ const taxiVerify = (plateNumber) => {
 
 const governmentVerify = (plateNumber) => {
   let isGovernment = false;
-  plateNumber.split("").forEach((char) => {
+  plateNumber.forEach((char) => {
     if (isAlpha(char)) isGovernment = true;
   });
   return isGovernment;
