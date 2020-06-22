@@ -15,7 +15,8 @@ decision whether the vehicle may enter the parking lot.
 3. Open terminal and run:  
    "npm i"  
    "npm start" to run the server
-4. Open postman:  
+4. Here you can find plates images and Postman collection -> https://drive.google.com/drive/folders/1FaAQ46yHGxEkDKgXe-BWr0rfXpEGnSox?usp=sharing
+5. Open postman:  
    Get request to "http://localhost:5000/api/park" In body mention the requested image path {"path": "path to image"}.  
    Get request to "http://localhost:5000/api/decisions" to get all decisiond from database.  
    Delete request to "http://localhost:5000/api/decisions" to DELETE all decisiond from database.
