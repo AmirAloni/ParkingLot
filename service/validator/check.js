@@ -16,20 +16,18 @@ const sumLetters = (str) => {
 };
 
 const taxiVerify = (plateNumber) => {
-  const last = plateNumber.length - 1;
   return ["25", "26"].includes(plateNumber.slice(-2));
 };
 
 const governmentVerify = (plateNumber) => {
   let isGovernment = false;
-  plateNumber.split("").map((char) => {
+  plateNumber.split("").forEach((char) => {
     if (isAlpha(char)) isGovernment = true;
   });
   return isGovernment;
 };
 
 const specialDigitsVerify = (plateNumber) => {
-  const last = plateNumber.length - 1;
   return (
     plateNumber.length === 7 &&
     ["85", "86", "87", "88", "89", "00"].includes(plateNumber.slice(-2))
